@@ -1,4 +1,4 @@
-#! /usr/bin/env python3
+#!/usr/bin/env python3
 # Sources:
 # https://www.tutorialspoint.com/python3/python_multithreading.htm
 # Author: NyboMønster
@@ -63,10 +63,11 @@ thread2 = LysThread(LysThread, LysLampsCondition)
 thread3 = JordFugtThread(JordFugtThread, JordFugtCondition)
 
 # Start new threads
-thread1.start()
-thread2.start()
-thread3.start()
-thread1.join()
-thread2.join()
-thread3.join()
-print ("Exiting Main Thread")
+while True:
+    thread1.start()
+    thread2.start()
+    thread3.start()
+    thread1.join()
+    thread2.join()
+    thread3.join()
+    print ("Exiting Main Thread")
