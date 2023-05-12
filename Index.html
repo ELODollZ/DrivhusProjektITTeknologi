@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Plante</title>
+</head>
+<body>
+    <!-- De blanke div tags gør bare at alt i flex boksen ikke scaler sammen i height -->
+    <h1>Plante</h1>
+    <div class="flex">
+        <!-- Table -->
+    <div>
+        
+        <div class="table">
+            <!-- Top af table -->
+            <p class="top">ID</p>
+            <p class="top">Day</p>
+            <p class="top">Temp</p>
+            <p class="top">Pump</p>
+            <p class="top">Humidity</p>
+            <p class="top">Red Lamp</p>
+            <p class="top">Blue Lamp</p>
+            <!-- Inputs -->
+            <!-- Inputs bliver deres ID da det er en som kun de kan have -->
+            <p id="ID" class="element">1</p>
+            <p id="Day" class="element">11-05-23</p>
+            <p id="Temp" class="element">12</p>
+            <p id="Pump" class="element">On</p>
+            <p id="Hum" class="element">15%</p>
+            <p id="red" class="element">Off</p>
+            <p id="blue" class="element">On</p>
+            
+        </div>
+    </div>
+        <!-- Kamera -->
+        <!-- src filen som er image -->
+        <!-- Linket i den er bare en placeholder og ikke noget andet. Bare fjern linket når du skal sætte dit egent ind :D -->
+            <img src="https://watchandlearn.scholastic.com/content/dam/classroom-magazines/watchandlearn/videos/animals-and-plants/plants/what-are-plants-/english/wall-2018-whatareplantsmp4.transform/content-tile-large/image.png" alt="Insert image">
+        <!-- Buttons -->
+<div>
+    <h2>Water</h2>
+    <div class="flex">
+        <button type="button" onclick="">On</button>
+        <button type="button" onclick="">Off</button>
+    </div>
+    <h2>Lights</h2>
+    <p bold>Blue</p>
+    <div class="flex">
+        <button type="button" onclick="">On</button>
+        <button type="button" onclick="">Off</button>
+    </div>
+    <p id="bintensity">0%</p>
+    <div id="scaler"></div>
+    <p>Red</p>
+    <div class="flex">
+        <button type="button" onclick="">On</button>
+        <button type="button" onclick="">Off</button>
+    </div>
+    <p id="rintensity">0%</p>
+    <div id="scaler"></div>
+</div>
+</div>
+
+</body>
+</html>
