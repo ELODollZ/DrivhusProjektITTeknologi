@@ -6,8 +6,7 @@ import time
 from machine import ADC, Pin
 import utime
 
-# use variables instead of numbers:
-soil = ADC(Pin(26)) # Soil moisture PIN reference
+# use variables instead of numbers
 
 
 bus = smbus2.SMBus(1) # RPi revision 2 (0 for revision 1)
@@ -20,9 +19,10 @@ readDelay = 0.5 # delay between readings
 
 while True:
     # read moisture value and convert to percentage into the calibration range
-    moisture = (max_moisture-soil.read_u16())*100/(max_moisture-min_moisture) 
+   # moisture = (max_moisture-soil.read_u16())*100/(max_moisture-min_moisture) 
     # print values
-    print("moisture: " + "%.2f" % moisture +"% (adc: "+str(soil.read_u16())+")")
-    utime.sleep(readDelay) # set a delay between readings
-    
-    
+    #print("moisture: " + "%.2f" % moisture +"% (adc: "+str(soil.read_u16())+")")
+    #utime.sleep(readDelay) # set a delay between readings
+    adcval=bus.read_i2c_block_data(i2c_address, 0)
+    print(adcval)
+    sleep(0.5)
