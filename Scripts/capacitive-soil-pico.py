@@ -3,8 +3,8 @@ import time
 
 
 # import required modules
-from machine import ADC, Pin
-import utime
+#from machine import ADC, Pin
+#import utime
 
 # use variables instead of numbers
 
@@ -15,7 +15,7 @@ i2c_address = 0x49  # default address
 min_moisture=0
 max_moisture=65535
 
-readDelay = 0.5 # delay between readings
+#readDelay = 0.5 # delay between readings
 
 while True:
     # read moisture value and convert to percentage into the calibration range
@@ -25,4 +25,4 @@ while True:
     #utime.sleep(readDelay) # set a delay between readings
     adcval=bus.read_i2c_block_data(i2c_address, 0, 2)
     print(adcval)
-    sleep(0.5)
+    time.sleep(0.5)
